@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    {% for data in datas %}
+    <p>Name: {{data.name}}</p>
+    <p>Age: {{data.age}}</p>
+    <p>Section: {{data.section}}</p>
+    <img src="{{data.image.url}}" alt="" />
+    <a href="{% url 'update' data.id %}"><button>Update</button></a>
+    <a href="{% url 'delete' data.id %}"> <button>Delete</button></a>
+
+    <hr />
+    {% endfor %}
+  </body>
+</html>
